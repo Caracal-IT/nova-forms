@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
-import { AppComponent } from './app.component';
-import {DynamicFormModule} from "./modules/dynamic-form/dynamic-form.module";
+import { AppComponent } from './components/app/app.component';
+import {DynamicFormModule} from "../dynamic-form/dynamic-form.module";
 
 
 @NgModule({
