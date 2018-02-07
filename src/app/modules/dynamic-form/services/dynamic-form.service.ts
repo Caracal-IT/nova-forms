@@ -3,10 +3,10 @@ import {ComponentService} from "./component.service";
 
 @Injectable()
 export class DynamicFormService {
-    constructor(private componetService: ComponentService){ }
+    constructor(private componentService: ComponentService){ }
 
     createComponent(container: any, config: any, model: any, wf: any) {
-        const dynamicForm = this.componetService.resolve("dynamicForm");
+        const dynamicForm = this.componentService.resolve("dynamicForm");
         container.clear();
 
         const component = container.createComponent(dynamicForm);
