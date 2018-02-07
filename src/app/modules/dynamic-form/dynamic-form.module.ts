@@ -4,9 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { DynamicFormComponent } from './containers/dynamic-form/dynamic-form.component';
 
 import { ControlBinderDirective } from "./components/control-binder/control-binder.directive";
-import { DynamicInputComponent } from "./components/dynamic-input/dynamic-input.component";
-import { DynamicButtonComponent } from "./components/dynamic-button/dynamic-button.component";
-import { DynamicHeaderComponent } from "./components/dynamic-header/dynamic-header.component";
+
 import {TranslateLoader, TranslateModule, TranslateStaticLoader} from "ng2-translate";
 import {ComponentService} from "./services/component.service";
 import {DynamicFormService} from "./services/dynamic-form.service";
@@ -29,19 +27,13 @@ export function createTranslateLoader(http: Http){
     ],
     declarations: [
         ControlBinderDirective,
-        DynamicFormComponent,
-        DynamicInputComponent,
-        DynamicButtonComponent,
-        DynamicHeaderComponent
+        DynamicFormComponent
     ],
     exports: [
         DynamicFormComponent
     ],
     entryComponents: [
-        DynamicFormComponent,
-        DynamicInputComponent,
-        DynamicButtonComponent,
-        DynamicHeaderComponent
+        DynamicFormComponent
     ]
 })
 export class DynamicFormModule {
@@ -63,8 +55,5 @@ export class DynamicFormModule {
 
     public static registerComponents(){
         ComponentService.add("dynamicForm", DynamicFormComponent);
-        ComponentService.add("input", DynamicInputComponent);
-        ComponentService.add("button", DynamicButtonComponent);
-        ComponentService.add("header", DynamicHeaderComponent);
     }
 }
