@@ -3,5 +3,4 @@ export * from './src/app/modules/dynamic-form/containers/dynamic-form/dynamic-fo
 
 export * from './src/app/modules/dynamic-form/services/component.service'
 export * from './src/app/modules/dynamic-form/services/dynamic-form.service'
-export * from './src/app/modules/dynamic-form/services/nova.translations.service'
 

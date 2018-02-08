@@ -1,15 +1,14 @@
-import {ModuleWithProviders, NgModule, Provider} from '@angular/core';
+import {NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DynamicFormComponent } from './containers/dynamic-form/dynamic-form.component';
 
 import { ControlBinderDirective } from "./components/control-binder/control-binder.directive";
 
-import {TranslateLoader, TranslateModule, TranslateStaticLoader} from "ng2-translate";
+import {TranslateModule} from "ng2-translate";
 import {ComponentService} from "./services/component.service";
 import {DynamicFormService} from "./services/dynamic-form.service";
-import {Http} from "@angular/http";
-import {NovaTranslationsService} from "./services/nova.translations.service";
+
 
 @NgModule({
     imports: [
@@ -23,8 +22,7 @@ import {NovaTranslationsService} from "./services/nova.translations.service";
     ],
     providers: [
       ComponentService,
-      DynamicFormService,
-      NovaTranslationsService
+      DynamicFormService
     ],
     exports: [
         DynamicFormComponent
