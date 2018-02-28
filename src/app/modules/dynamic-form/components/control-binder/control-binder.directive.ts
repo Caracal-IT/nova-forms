@@ -1,7 +1,5 @@
 import {Directive, Input, TemplateRef, ViewContainerRef} from "@angular/core";
 import { ComponentService } from "../../services/component.service";
-import {forEach} from "@angular/router/src/utils/collection";
-import {TranslateService} from "ng2-translate";
 import {NovaTranslatorService} from "../../models/nova-translator.service";
 
 @Directive({
@@ -45,12 +43,8 @@ export class ControlBinderDirective {
           .get(this.interpolations["label"], this.model)
           .take(1)
           .subscribe(translation => {
-            if(translation === "Vehicle.Header"){
-              console.log(translation);
-            }
-
-             this.config["label"] = this.translate.interpolate(translation, this.model);
-          });;
+            this.config["label"] = this.translate.interpolate(translation, this.model);
+          });
       }
   }
 }
