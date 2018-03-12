@@ -1,6 +1,8 @@
-import {Directive, Input, TemplateRef, ViewContainerRef} from "@angular/core";
+import {Directive, Input, ViewContainerRef} from "@angular/core";
 import { ComponentService } from "../../services/component.service";
 import {NovaTranslatorService} from "../../models/nova-translator.service";
+
+import "rxjs/add/operator/take";
 
 @Directive({
     selector: '[controlBinder]'
